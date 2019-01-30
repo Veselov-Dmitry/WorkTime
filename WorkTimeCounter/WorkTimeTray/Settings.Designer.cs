@@ -41,12 +41,18 @@
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.buttonBackground = new System.Windows.Forms.Button();
             this.panelBackgorund = new System.Windows.Forms.Panel();
-            this.labelBackgound = new System.Windows.Forms.Label();
             this.panelColor = new System.Windows.Forms.Panel();
+            this.labelBackgound = new System.Windows.Forms.Label();
+            this.panelLogFite = new System.Windows.Forms.Panel();
+            this.buttonLogFile = new System.Windows.Forms.Button();
+            this.textBoxLogFile = new System.Windows.Forms.TextBox();
+            this.labelLogFile = new System.Windows.Forms.Label();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panelUpdateTime.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderNumber)).BeginInit();
             this.panelDay.SuspendLayout();
             this.panelBackgorund.SuspendLayout();
+            this.panelLogFite.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonCancel
@@ -149,6 +155,14 @@
             this.panelBackgorund.Size = new System.Drawing.Size(200, 50);
             this.panelBackgorund.TabIndex = 5;
             // 
+            // panelColor
+            // 
+            this.panelColor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelColor.Location = new System.Drawing.Point(8, 20);
+            this.panelColor.Name = "panelColor";
+            this.panelColor.Size = new System.Drawing.Size(25, 23);
+            this.panelColor.TabIndex = 6;
+            // 
             // labelBackgound
             // 
             this.labelBackgound.AutoSize = true;
@@ -158,19 +172,55 @@
             this.labelBackgound.TabIndex = 5;
             this.labelBackgound.Text = "Background color";
             // 
-            // panelColor
+            // panelLogFite
             // 
-            this.panelColor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelColor.Location = new System.Drawing.Point(8, 20);
-            this.panelColor.Name = "panelColor";
-            this.panelColor.Size = new System.Drawing.Size(25, 23);
-            this.panelColor.TabIndex = 6;
+            this.panelLogFite.Controls.Add(this.buttonLogFile);
+            this.panelLogFite.Controls.Add(this.textBoxLogFile);
+            this.panelLogFite.Controls.Add(this.labelLogFile);
+            this.panelLogFite.Location = new System.Drawing.Point(13, 181);
+            this.panelLogFite.Name = "panelLogFite";
+            this.panelLogFite.Size = new System.Drawing.Size(200, 50);
+            this.panelLogFite.TabIndex = 4;
+            // 
+            // buttonLogFile
+            // 
+            this.buttonLogFile.Location = new System.Drawing.Point(122, 17);
+            this.buttonLogFile.Name = "buttonLogFile";
+            this.buttonLogFile.Size = new System.Drawing.Size(75, 23);
+            this.buttonLogFile.TabIndex = 7;
+            this.buttonLogFile.Text = "Browse...";
+            this.buttonLogFile.UseVisualStyleBackColor = true;
+            this.buttonLogFile.Click += new System.EventHandler(this.buttonLogFile_Click);
+            // 
+            // textBoxLogFile
+            // 
+            this.textBoxLogFile.Location = new System.Drawing.Point(8, 20);
+            this.textBoxLogFile.MaxLength = 255;
+            this.textBoxLogFile.Name = "textBoxLogFile";
+            this.textBoxLogFile.ReadOnly = true;
+            this.textBoxLogFile.Size = new System.Drawing.Size(108, 20);
+            this.textBoxLogFile.TabIndex = 1;
+            // 
+            // labelLogFile
+            // 
+            this.labelLogFile.AutoSize = true;
+            this.labelLogFile.Location = new System.Drawing.Point(4, 4);
+            this.labelLogFile.Name = "labelLogFile";
+            this.labelLogFile.Size = new System.Drawing.Size(62, 13);
+            this.labelLogFile.TabIndex = 0;
+            this.labelLogFile.Text = "Path log file";
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.Filter = "json|*.json";
             // 
             // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(401, 450);
+            this.Controls.Add(this.panelLogFite);
             this.Controls.Add(this.panelBackgorund);
             this.Controls.Add(this.panelDay);
             this.Controls.Add(this.panelUpdateTime);
@@ -185,6 +235,8 @@
             this.panelDay.PerformLayout();
             this.panelBackgorund.ResumeLayout(false);
             this.panelBackgorund.PerformLayout();
+            this.panelLogFite.ResumeLayout(false);
+            this.panelLogFite.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -205,5 +257,10 @@
         private System.Windows.Forms.Label labelBackgound;
         private System.Windows.Forms.Button buttonBackground;
         private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.Panel panelLogFite;
+        private System.Windows.Forms.Button buttonLogFile;
+        private System.Windows.Forms.TextBox textBoxLogFile;
+        private System.Windows.Forms.Label labelLogFile;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
